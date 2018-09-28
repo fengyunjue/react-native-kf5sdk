@@ -1,0 +1,24 @@
+{
+  "name": "react-native-kf5sdk",
+  "version": "2.7.1",
+  "description": "react native kf5 sdk",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fengyunjue/react-native-kf5sdk.git"
+  },
+  "keywords": [
+    "sdk",
+    "kf5",
+    "kf5sdk"
+  ],
+  "author": "fengyunjue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengyunjue/react-native-kf5sdk/issues"
+  },
+  "homepage": "https://www.kf5.com"
+}
