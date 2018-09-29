@@ -10,6 +10,43 @@
 		8448AB3D215F2B250029E9A7 /* libKF5SDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448AB22215F2B250029E9A7 /* libKF5SDKCore.a */; };
 		8448AB3E215F2B250029E9A7 /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448AB28215F2B250029E9A7 /* libopencore-amrnb.a */; };
 		8448AB3F215F2B250029E9A7 /* libKF5SDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8448AB2B215F2B250029E9A7 /* libKF5SDK.a */; };
+		8448AB40215F2C4E0029E9A7 /* KFMessage.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB15215F2B250029E9A7 /* KFMessage.h */; };
+		8448AB41215F2C4E0029E9A7 /* KF5SDKChat.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB16215F2B250029E9A7 /* KF5SDKChat.h */; };
+		8448AB42215F2C4E0029E9A7 /* KFDocumentViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB17215F2B250029E9A7 /* KFDocumentViewController.h */; };
+		8448AB43215F2C4E0029E9A7 /* KFChatViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB18215F2B250029E9A7 /* KFChatViewController.h */; };
+		8448AB44215F2C4E0029E9A7 /* KF5SDKCore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB19215F2B250029E9A7 /* KF5SDKCore.h */; };
+		8448AB45215F2C4E0029E9A7 /* KFRatingViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB1A215F2B250029E9A7 /* KFRatingViewController.h */; };
+		8448AB46215F2C4E0029E9A7 /* KFDocument.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB1B215F2B250029E9A7 /* KFDocument.h */; };
+		8448AB47215F2C4E0029E9A7 /* KFAgent.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB1C215F2B250029E9A7 /* KFAgent.h */; };
+		8448AB48215F2C4E0029E9A7 /* KFComment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB1D215F2B250029E9A7 /* KFComment.h */; };
+		8448AB49215F2C4E0029E9A7 /* KFLogger.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB1E215F2B250029E9A7 /* KFLogger.h */; };
+		8448AB4A215F2C4E0029E9A7 /* KFBaseViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB1F215F2B250029E9A7 /* KFBaseViewController.h */; };
+		8448AB4B215F2C4E0029E9A7 /* KFRatingModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB20215F2B250029E9A7 /* KFRatingModel.h */; };
+		8448AB4C215F2C4E0029E9A7 /* KFDocBaseViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB21215F2B250029E9A7 /* KFDocBaseViewController.h */; };
+		8448AB4D215F2C4E0029E9A7 /* KFAttachment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB23215F2B250029E9A7 /* KFAttachment.h */; };
+		8448AB4E215F2C4E0029E9A7 /* KFPostListViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB24215F2B250029E9A7 /* KFPostListViewController.h */; };
+		8448AB4F215F2C4E0029E9A7 /* KF5SDKTicket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB25215F2B250029E9A7 /* KF5SDKTicket.h */; };
+		8448AB50215F2C4E0029E9A7 /* KFDocItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB26215F2B250029E9A7 /* KFDocItem.h */; };
+		8448AB51215F2C4E0029E9A7 /* KFTicketListViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB27215F2B250029E9A7 /* KFTicketListViewController.h */; };
+		8448AB52215F2C4E0029E9A7 /* KFUserManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB29215F2B250029E9A7 /* KFUserManager.h */; };
+		8448AB53215F2C4E0029E9A7 /* KFForumListViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB2A215F2B250029E9A7 /* KFForumListViewController.h */; };
+		8448AB54215F2C4E0029E9A7 /* KFTicketViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB2C215F2B250029E9A7 /* KFTicketViewController.h */; };
+		8448AB55215F2C4E0029E9A7 /* KFChatManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB2D215F2B250029E9A7 /* KFChatManager.h */; };
+		8448AB56215F2C4E0029E9A7 /* KFCreateTicketViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB2E215F2B250029E9A7 /* KFCreateTicketViewController.h */; };
+		8448AB57215F2C4E0029E9A7 /* KFTicketManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB2F215F2B250029E9A7 /* KFTicketManager.h */; };
+		8448AB58215F2C4E0029E9A7 /* KFDispatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB30215F2B250029E9A7 /* KFDispatcher.h */; };
+		8448AB59215F2C4E0029E9A7 /* KFChatViewModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB31215F2B250029E9A7 /* KFChatViewModel.h */; };
+		8448AB5A215F2C4E0029E9A7 /* KFMessageModel.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB32215F2B250029E9A7 /* KFMessageModel.h */; };
+		8448AB5B215F2C4E0029E9A7 /* KFCategorieListViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB33215F2B250029E9A7 /* KFCategorieListViewController.h */; };
+		8448AB5C215F2C4E0029E9A7 /* KFConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB34215F2B250029E9A7 /* KFConfig.h */; };
+		8448AB5D215F2C4E0029E9A7 /* KFDetailMessageViewController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB35215F2B250029E9A7 /* KFDetailMessageViewController.h */; };
+		8448AB5E215F2C4E0029E9A7 /* KFChatVoiceManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB36215F2B250029E9A7 /* KFChatVoiceManager.h */; };
+		8448AB5F215F2C4E0029E9A7 /* KFHttpTool.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB37215F2B250029E9A7 /* KFHttpTool.h */; };
+		8448AB60215F2C4E0029E9A7 /* KFTicket.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB38215F2B250029E9A7 /* KFTicket.h */; };
+		8448AB61215F2C4E0029E9A7 /* KF5SDKDoc.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB39215F2B250029E9A7 /* KF5SDKDoc.h */; };
+		8448AB62215F2C4E0029E9A7 /* KF5SDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB3A215F2B250029E9A7 /* KF5SDK.h */; };
+		8448AB63215F2C4E0029E9A7 /* KFHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB3B215F2B250029E9A7 /* KFHelper.h */; };
+		8448AB64215F2C4E0029E9A7 /* KFUser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8448AB3C215F2B250029E9A7 /* KFUser.h */; };
 		84DCC826215B354F00B58E8D /* RCTKF5SDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DCC825215B354F00B58E8D /* RCTKF5SDK.m */; };
 		84DCC827215B354F00B58E8D /* RCTKF5SDK.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84DCC824215B354F00B58E8D /* RCTKF5SDK.h */; };
 /* End PBXBuildFile section */
@@ -21,6 +58,43 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				8448AB40215F2C4E0029E9A7 /* KFMessage.h in CopyFiles */,
+				8448AB41215F2C4E0029E9A7 /* KF5SDKChat.h in CopyFiles */,
+				8448AB42215F2C4E0029E9A7 /* KFDocumentViewController.h in CopyFiles */,
+				8448AB43215F2C4E0029E9A7 /* KFChatViewController.h in CopyFiles */,
+				8448AB44215F2C4E0029E9A7 /* KF5SDKCore.h in CopyFiles */,
+				8448AB45215F2C4E0029E9A7 /* KFRatingViewController.h in CopyFiles */,
+				8448AB46215F2C4E0029E9A7 /* KFDocument.h in CopyFiles */,
+				8448AB47215F2C4E0029E9A7 /* KFAgent.h in CopyFiles */,
+				8448AB48215F2C4E0029E9A7 /* KFComment.h in CopyFiles */,
+				8448AB49215F2C4E0029E9A7 /* KFLogger.h in CopyFiles */,
+				8448AB4A215F2C4E0029E9A7 /* KFBaseViewController.h in CopyFiles */,
+				8448AB4B215F2C4E0029E9A7 /* KFRatingModel.h in CopyFiles */,
+				8448AB4C215F2C4E0029E9A7 /* KFDocBaseViewController.h in CopyFiles */,
+				8448AB4D215F2C4E0029E9A7 /* KFAttachment.h in CopyFiles */,
+				8448AB4E215F2C4E0029E9A7 /* KFPostListViewController.h in CopyFiles */,
+				8448AB4F215F2C4E0029E9A7 /* KF5SDKTicket.h in CopyFiles */,
+				8448AB50215F2C4E0029E9A7 /* KFDocItem.h in CopyFiles */,
+				8448AB51215F2C4E0029E9A7 /* KFTicketListViewController.h in CopyFiles */,
+				8448AB52215F2C4E0029E9A7 /* KFUserManager.h in CopyFiles */,
+				8448AB53215F2C4E0029E9A7 /* KFForumListViewController.h in CopyFiles */,
+				8448AB54215F2C4E0029E9A7 /* KFTicketViewController.h in CopyFiles */,
+				8448AB55215F2C4E0029E9A7 /* KFChatManager.h in CopyFiles */,
+				8448AB56215F2C4E0029E9A7 /* KFCreateTicketViewController.h in CopyFiles */,
+				8448AB57215F2C4E0029E9A7 /* KFTicketManager.h in CopyFiles */,
+				8448AB58215F2C4E0029E9A7 /* KFDispatcher.h in CopyFiles */,
+				8448AB59215F2C4E0029E9A7 /* KFChatViewModel.h in CopyFiles */,
+				8448AB5A215F2C4E0029E9A7 /* KFMessageModel.h in CopyFiles */,
+				8448AB5B215F2C4E0029E9A7 /* KFCategorieListViewController.h in CopyFiles */,
+				8448AB5C215F2C4E0029E9A7 /* KFConfig.h in CopyFiles */,
+				8448AB5D215F2C4E0029E9A7 /* KFDetailMessageViewController.h in CopyFiles */,
+				8448AB5E215F2C4E0029E9A7 /* KFChatVoiceManager.h in CopyFiles */,
+				8448AB5F215F2C4E0029E9A7 /* KFHttpTool.h in CopyFiles */,
+				8448AB60215F2C4E0029E9A7 /* KFTicket.h in CopyFiles */,
+				8448AB61215F2C4E0029E9A7 /* KF5SDKDoc.h in CopyFiles */,
+				8448AB62215F2C4E0029E9A7 /* KF5SDK.h in CopyFiles */,
+				8448AB63215F2C4E0029E9A7 /* KFHelper.h in CopyFiles */,
+				8448AB64215F2C4E0029E9A7 /* KFUser.h in CopyFiles */,
 				84DCC827215B354F00B58E8D /* RCTKF5SDK.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,10 +429,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RCTKF5SDK/KF5SDK/Vendors/MLRecorder",
 					"$(PROJECT_DIR)/RCTKF5SDK/KF5SDK",
 					"$(PROJECT_DIR)/RCTKF5SDK/KF5SDKCore",
-					"$(PROJECT_DIR)/RCTKF5SDK/KF5SDK/KF5SDKCore",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -373,10 +445,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RCTKF5SDK/KF5SDK/Vendors/MLRecorder",
 					"$(PROJECT_DIR)/RCTKF5SDK/KF5SDK",
 					"$(PROJECT_DIR)/RCTKF5SDK/KF5SDKCore",
-					"$(PROJECT_DIR)/RCTKF5SDK/KF5SDK/KF5SDKCore",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
