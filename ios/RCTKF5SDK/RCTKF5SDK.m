@@ -71,7 +71,7 @@ RCT_EXPORT_METHOD(initKF5:(NSDictionary *)paramDict completion:(RCTResponseSende
         isPhone = phone.length > 0;
     }
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithCapacity:2];
-    [params setObject:@"apicloud" forKey:@"source"];
+    [params setObject:@"react-native" forKey:@"source"];
     if (isPhone) {
         [params setObject:phone forKey:KF5Phone];
     }else{

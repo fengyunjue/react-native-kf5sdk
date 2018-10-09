@@ -268,8 +268,8 @@ public class SDKInitializeUtil {
             SPUtils.saveUserToken(SafeJson.safeGet(userObj, USER_TOKEN));
             JSONObject jsonObject = new JSONObject();
             jsonObject.put(ERROR_CODE, 0);
-            jsonObject.put(MESSAGE, "登录成功");
-            callback.invoke(result);
+            jsonObject.put(MESSAGE, "初始化成功");
+            callback.invoke(jsonObject.toString());
 //            uzModuleContext.success(jsonObject, true);
             toggleBoolUpdateUserInfo(updateMap, result);
             toggleDeviceToken(deviceToken, userObj);
@@ -324,7 +324,6 @@ public class SDKInitializeUtil {
     }
 
     private static void dealFailureResult(String result, Callback callback) {
-
         callback.invoke(result);
         printLog("登录失败回调");
     }
@@ -333,7 +332,7 @@ public class SDKInitializeUtil {
         try {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put(ERROR_CODE, -1);
-            jsonObject.put(MESSAGE, "登录失败，请稍后再试");
+            jsonObject.put(MESSAGE, "json数据格式异常");
             callback.invoke(jsonObject.toString());
             printLog("登录失败异常回调");
         } catch (JSONException e1) {

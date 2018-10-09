@@ -1,6 +1,6 @@
 {
   "name": "react-native-kf5sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react native kf5 sdk",
   "main": "index.js",
   "scripts": {
