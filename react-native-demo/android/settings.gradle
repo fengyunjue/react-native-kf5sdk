@@ -1,0 +1,5 @@
+rootProject.name = 'ReactNativeTestApp'
+
+include ':app'
+include ':react-native-kf5sdk'
+project(':react-native-kf5sdk').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-kf5sdk/android')

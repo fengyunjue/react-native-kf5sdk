@@ -1,20 +1,26 @@
 # 云客服 React-Native 模块集成指南
 ## KF5SDK
-### 简介
+##一、简介
+
 kf5提供给开发者发送工单、查看工单列表、查看知识库等功能。本模块封装了kf5的相关接口，使用此模块需先注册kf5来获取appid和hostName。注册kf5：登录kf5官网( www.kf5.com )注册kf5账号,进入控制面板 - 系统设置 - 支持渠道 - 移动APP SDK中添加一个APP以获取appid，hostName为你注册的域名，例如：kf5.kf5.com。本模块支持iOS8.0以上和Android 4.1以上。
 
-### 安装与配置
-#### 安装
+##二、安装与配置
+
+###一、安装
+
 ```
 npm install react-native-kf5sdk
 ```
 
 即把react-native-kf5sdk导入到工程中的node_modules文件夹中
 
-#### 配置
-##### iOS
+###二、配置
+
+#### 1、iOS
+
 通过rnpm link
 如果你还没有安装[rnpm](https://github.com/rnpm/rnpm)，执行以下命令来安装rnpm
+
 ```
 npm install -g rnpm
 ```
@@ -40,21 +46,18 @@ Photos.framework
 AssetsLibrary.framework
 等依赖库
 ```
-iOS9传输安全问题
-```
-在iOS9中，默认需要为每次网络传输建立SSL，解决方法是在应用plist文件中设置<key>NSAppTransportSecurity</key><dict><key>NSAllowsArbitraryLoads</key></true></dict>
-```
 如果在原生代码中需要引入KF5SDK
 ```
 在工程target的Build Setting->Library Search Paths中添加$(SRCROOT)/../node_modules/react-native-kf5sdk/ios/RCTKF5SDK、在Header Search Paths中添加$(SRCROOT)/../node_modules/react-native-kf5sdk/ios/RCTKF5SDK
 ```
-#### 注意：SDK需要使用以下权限,进入工程中的info.plist，添加以下权限  
+#####注意：SDK需要使用以下权限,进入工程中的info.plist，添加以下权限  
+
 Privacy - Camera Usage Description：我们需要拍摄照片发送图片,是否允许打开相机？    
 Privacy - Microphone Usage Description：我们需要录音发送语音消息,是否允许开启麦克风?  
 Privacy - Photo Library Usage Description：我们需要为您展示图片列表,是否允许访问媒体资料库？   
 ![privacy.png](http://upload-images.jianshu.io/upload_images/1429831-f6849f289bb5edad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-##### Android
+####2、Android
 
 手动配置
 编辑android/settings.gradle
@@ -103,7 +106,10 @@ public class MainApplication extends Application implements ReactApplication {
 ```
 如果你使用的React-Native版本中不包含MainApplication.java，则可能需要在MainActivity.java中注册模块，方法同上。
 
-### Method
+##三、方法接口描述
+
+react-native-kf5sdk提供一下方法：
+
 - initKF5
 - showHelpCenter
 - showRequestCreation
@@ -112,7 +118,6 @@ public class MainApplication extends Application implements ReactApplication {
 - setCustomFields
 - setTopBarColor
 
-### 方法接口描述
 #### * initKF5
 初始化kf5 
 ```
@@ -333,3 +338,72 @@ kf5sdk.setTopBarColor(params);
 ##### 补充说明  
 
 使用此接口，需配合其他接口一起使用。 
+
+## 四、推送设置
+
+云客服移动SDK 通知普通用户工单被客服公开回复，或即时交谈的离线消息。
+
+目前集成推送通知的唯一方法是使用一个回调的API，在使用该API前，您必须保证您的应用开启了远程推送服务。
+
+在这里，你需要做三件事：
+1、  在你的账号里配置您的移动SDK应用程序启动推送通知
+2、  设置回调URL支持我们的回调
+3、  在您的应用程序处理用户的唯一标示和推送请求
+![img](http://developer.kf5.com/images/sdk/ios-sdk-push-1.png)
+#### 回调的API
+当有消息发送时，云客服SDK将通知您设置的回调URL。之后，您的服务必须处理发送推送通知到最终用户的设备。
+当我们想要发送一个通知给最终用户,我们会发送一个流请求的URI设置应用程序配置。示例请求:
+
+```ruby
+ <回调URL>
+Content-Type: application/json
+Accept: application/json
+{
+  // 用户的信息 object
+  "user":{
+      // 被推送的user_id inter
+      "user_id":123
+    },
+  // 设备的列表 array
+  "device":[{ 
+      // 设备的唯一标示 string
+      "device_token":"1234567890",
+      // 设备的类型 string
+      "type":"IOS"
+  }],
+  // 推送通知信息 object
+  "notification": {
+    // 工单的id
+    "ticket_id":"123",
+    // 类型
+    "type":"ticket"
+  }
+}
+```
+同样，在聊天中发送离线消息中，向设置的回调URL发送的数据示例:
+```ruby
+ <回调URL>
+Content-Type: application/json
+Accept: application/json
+{
+  // 用户的信息 object
+  "user":{
+      // 被推送的user_id inter
+      "user_id":123
+    },
+  // 设备的列表 array
+  "device":[{
+      // 设备的唯一标示 string
+      "device_token":"1234567890",
+      // 设备的类型 string
+       "type":"IOS"
+  }],
+  // 推送通知信息 object
+  "notification": {
+      // 聊天消息
+      "message":"hello",
+      // 类型
+      "type":"im"
+  }
+}
+```

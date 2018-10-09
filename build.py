@@ -5,8 +5,8 @@ import helper
 import getopt
 
 source = '/Users/admin/Documents/WorkSpace/KF5SDK'
-sdkPath = 'ios/RCTKF5SDK/KF5SDK'
-sdkBundle = 'ios/RCTKF5SDK/Bundle'
+sdkPath = 'react-native-kf5sdk/ios/RCTKF5SDK/KF5SDK'
+sdkBundle = 'react-native-kf5sdk/ios/RCTKF5SDK/Bundle'
 coreSdkPath =  '%s/KF5SDKCore' % sdkPath
 
 
