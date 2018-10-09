@@ -1,12 +1,11 @@
 # 云客服 React-Native 模块集成指南
-## KF5SDK
-##一、简介
+## 一、简介
 
 kf5提供给开发者发送工单、查看工单列表、查看知识库等功能。本模块封装了kf5的相关接口，使用此模块需先注册kf5来获取appid和hostName。注册kf5：登录kf5官网( www.kf5.com )注册kf5账号,进入控制面板 - 系统设置 - 支持渠道 - 移动APP SDK中添加一个APP以获取appid，hostName为你注册的域名，例如：kf5.kf5.com。本模块支持iOS8.0以上和Android 4.1以上。
 
-##二、安装与配置
+## 二、安装与配置
 
-###一、安装
+###  一、安装
 
 ```
 npm install react-native-kf5sdk
@@ -14,14 +13,14 @@ npm install react-native-kf5sdk
 
 即把react-native-kf5sdk导入到工程中的node_modules文件夹中
 
-###二、配置
+### 二、配置
 
 #### 1、iOS
 
 通过rnpm link
 如果你还没有安装[rnpm](https://github.com/rnpm/rnpm)，执行以下命令来安装rnpm
 
-```
+```ruby
 npm install -g rnpm
 ```
 安装完rnpm后执行以下命令
@@ -29,7 +28,7 @@ npm install -g rnpm
 rnpm link react-native-kf5sdk
 ```
 link成功命令行会提示
-```
+```ruby
 rnpm info Linking react-native-kf5sdk ios dependency
 ```
 或者你还可以手动配置
@@ -57,19 +56,19 @@ Privacy - Microphone Usage Description：我们需要录音发送语音消息,�
 Privacy - Photo Library Usage Description：我们需要为您展示图片列表,是否允许访问媒体资料库？   
 ![privacy.png](http://upload-images.jianshu.io/upload_images/1429831-f6849f289bb5edad.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-####2、Android
+#### 2、Android
 
 手动配置
 编辑android/settings.gradle
 
-```
+```javascript
 // ...
 include ':app'
 include ':react-native-kf5sdk'
 project(':react-native-kf5sdk').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-kf5sdk/android')
 ```
 编辑android/app/build.gradle
-```
+```javascript
 // ...
 
 dependencies {
@@ -79,7 +78,8 @@ dependencies {
 ```
 在MainApplication.java中注册模块（基于React-Native 0.32+）
 编辑android/app/src/main/java/[...]/MainApplication.java
-```
+
+```java
 // ...
 
 import com.kf5.rn.KF5SdkPackage;    // <--- 导包
@@ -120,7 +120,7 @@ react-native-kf5sdk提供一下方法：
 
 #### * initKF5
 初始化kf5 
-```
+```javascript
 initKF5({params}, callback(result)) 
 ```
 
@@ -193,7 +193,7 @@ var params = {
 kf5sdk.showHelpCenter(params);  
 ```
 
-#####补充说明  
+##### 补充说明  
 
 使用此接口,必须先使用initKF5进行初始化。 
 
@@ -236,7 +236,7 @@ kf5sdk.showRequestList();
 #### * showChatView
 
 弹出kf5即时交谈
-```
+```javascript
 showChatView({params})
 ```
 
@@ -271,7 +271,7 @@ kf5sdk.showChatView(params);
 #### * setCustomFields
 
 设置工单自定义字段
-```
+```javascript
 setCustomFields({params})
 ```
 
@@ -306,7 +306,7 @@ kf5sdk.setCustomFields(params);
 #### * setTopBarColor
 
 设置头部nav的颜色样式  
-```
+```javascript
 setTopBarColor({params})  
 ```
 
@@ -321,7 +321,7 @@ setTopBarColor({params})
 | rightTextVisible  | 布尔型 | 可选     | 头部Nav右侧TextView是否可见，默认值：true            |
 
 ##### 示例代码
-```
+```javascript
 import kf5sdk from 'react-native-kf5sdk';
 
 var params = {
@@ -368,7 +368,7 @@ Accept: application/json
   "device":[{ 
       // 设备的唯一标示 string
       "device_token":"1234567890",
-      // 设备的类型 string
+      // 设备的类型 string IOS 或 Android
       "type":"IOS"
   }],
   // 推送通知信息 object
@@ -395,7 +395,7 @@ Accept: application/json
   "device":[{
       // 设备的唯一标示 string
       "device_token":"1234567890",
-      // 设备的类型 string
+      // 设备的类型 string IOS 或 Android
        "type":"IOS"
   }],
   // 推送通知信息 object
